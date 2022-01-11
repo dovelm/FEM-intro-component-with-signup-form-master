@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/*Variables css*/
+
+:root {
+    --primary-color:hsl(0, 100%, 74%);
+    --secundary-color:hsl(154, 59%, 51%);
+    --thrid-color:hsl(248, 32%, 49%);
+    --color-hover-one:hsl(154, 70%, 56%);
+    --neutral-white:hsl(0, 0%, 100%);
+    --neutral-gray:hsl(246, 25%, 77%);
+    --neutral-blue:hsl(249, 10%, 26%) ;
+    --neutral-red:#f54242;
+    --primary-font-family: 'Poppins', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    background-color: var(--primary-color);
+    background-image: url(images/bg-intro-desktop.png);
+    background-repeat: repeat;
+    background-size: contain;
+    font-family: var(--primary-font-family);
+    font-size: 1rem;
+}
+.container{
+    width: 1100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+}
+.section-one{
+    width: 600px;
+}
+.section-two, .register{
+    width: 500px;
+}
+.title, .text{
+    color:var(--neutral-white);
+}
+.title{
+    margin-bottom: 30px;
+    width: 380px;
+    font-size: 2.8rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+.text{
+    margin-right: 50px;
+    font-weight: 400;
+}
+.register{
+   margin-bottom: 23px;
+   padding: 18px 0;
+   background-color: var(--thrid-color);
+   border-radius: 10px;
+   text-align: center;
+   color:var(--neutral-white);
+   box-shadow: 0px 8px #DA6668;
+}
+.text-trial{
+    font-weight: 600;
+}
+.form{
+    padding: 40px;
+    background-color: var(--neutral-white);
+    border-radius: 10px;
+    box-shadow: 0px 8px #DA6668;
+}
+.input{
+    padding: 15px 0 15px 20px;
+    width: 400px;
+    display: block;
+    border: 1px solid var(--neutral-blue);
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight: 700;
+}
+.form-group{
+    height: 80px;
+    position: relative;
+}
+.icon-error, .alert-msg{
+    display: none;
+    position: absolute;
+}
+.icon-error{
+    right: 25px;
+    top: 10px;
+}
+.alert-msg{
+    right: 0px;
+    top: 55px;
+    font-size: 0.8rem;
+    color:var(--neutral-red);
+    font-weight: 600;
+    font-style: italic;
+}
+.form-group.error .icon-error, .form-group.error .alert-msg {
+    display: block;
+}
+.form-group.error .input, .form-group.error .input:focus {
+	border: 2px solid #f54242;
+}
+.form.error .input::placeholder{
+    color:transparent;
+}
+.btn-primary{
+    padding: 17px 0 14px 0;
+    width: 420px;
+    background-color: var(--secundary-color);
+    color: var(--neutral-white);
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform:uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0px 4px #3AB57E;
+    transition: all .2s ease;
+}
+.btn-primary:hover{
+    background-color: var(--color-hover-one);
+    cursor: pointer;
+}
+.form-footer{
+    margin-top: 18px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color:var( --neutral-gray);
+    text-align: center;
+    letter-spacing: 0.4px;
+}
+.link-terms{
+    text-decoration: none;
+    font-weight: 700;
+    color:var(--neutral-red);
+}
+.link-terms:hover{
+    text-decoration:underline;
+}
+
+/*Footer*/
+.attribution {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 0.7rem; 
+    text-align: center;
+    font-weight: 400;
+}
+.attribution a { 
+    color:var(--neutral-white);
+}
+
+/*Media queries*/
+@media (max-width: 1099px) {
+    .container, .section-one, .title{
+        width: 500px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    }
+    .section-one{
+        text-align: center;
+    }
+    .text{
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 520px) {
+    body{
+        background-image: url(images/bg-intro-mobile.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .container, .section-one, .title, .section-two, .register{
+        max-width: 340px;
+    }
+    .title{
+        margin-top: 40px;
+        font-size: 2.5rem;
+    }
+    .text{
+      margin: 0 30px 30px 30px;
+    }
+    .text-register{
+        margin: 0 60px;
+    }
+    .form{
+        padding: 20px;
+    }
+    .form-group{
+        height: 90px;
+    }
+    .input{
+        width: 280px;
+    }
+    .btn-primary{
+        width: 300px;
+    }
+    .alert-msg{
+        font-weight: 500;
+    }
+    .icon-error{
+        right: 18px;
+    }
+    .link-terms{
+        line-height: 1.8;
+    }
+}
