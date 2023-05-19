@@ -38,7 +38,6 @@ Users should be able to:
 
 ![](https://github.com/dusvimarin/FEM-intro-component-with-signup-form-master/blob/main/screenshots/mobile.png)
 
-
 ### Links
 
 [My Solution](https://dusvimarin.github.io/FEM-intro-component-with-signup-form-master/)
